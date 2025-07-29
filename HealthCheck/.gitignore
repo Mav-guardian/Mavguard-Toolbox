@@ -1,0 +1,18 @@
+# Ignore compiled binaries
+*.exe
+*.dll
+*.pdb
+
+# Ignore build folders
+/bin/
+/obj/
+
+# Ignore VS Code and IDE config
+.vscode/
+*.user
+*.suo
+*.csproj.user
+
+# Logs and temp
+*.log
+*.tmp
