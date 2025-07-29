@@ -1,0 +1,4 @@
+# requirements.txt (generated based on import usage)
+pandas
+streamlit
+sqlite3
