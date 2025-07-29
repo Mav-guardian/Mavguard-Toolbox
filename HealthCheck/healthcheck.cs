@@ -1,6 +1,7 @@
-// HealthCheck.cs
-// Tool for evaluating Windows endpoint detection response and local reconnaissance
-// Author: theMavguardian (2025)
+// === HealthCheck.cs ===
+// Modular EDR Recon & Simulation Tool (Lab Use Only)
+// Author: theMavguradian (2025)
+// Description: A C# diagnostic utility to help understand what actions are flagged by EDRs
 
 using System;
 using System.Diagnostics;
@@ -71,6 +72,7 @@ namespace HealthCheck
             {
                 @"SECURITY\SAM",
                 @"SECURITY\Policy\Secrets",
+                @"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon",
                 @"SYSTEM\CurrentControlSet\Control\Lsa"
             };
 
@@ -173,5 +175,12 @@ namespace HealthCheck
         //    }
         //    Console.WriteLine();
         //}
+        // Simulate registry write (REQUIRES PRIVILEGE!)
+                // using (RegistryKey key = Registry.LocalMachine.CreateSubKey(@"SOFTWARE\\RedFlagTest"))
+                // {
+                //     key.SetValue("MaliciousFlag", "TestWrite", RegistryValueKind.String);
+                //     Console.WriteLine("[!] Simulated redflag: registry key written.");
+                // }
+        
     }
 }
