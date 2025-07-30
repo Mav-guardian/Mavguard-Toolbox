@@ -2,3 +2,6 @@
 pandas
 streamlit
 sqlite3
+
+#How to run it example
+python3 scansage01.py --internal ~/internal --openvas ./openvas_scans --db ./output/vuln01_data.db
